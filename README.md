@@ -76,7 +76,7 @@ docker rmi fexx182/spring-docker-spotify:0.0.1-SNAPSHOT
        `docker-compose -f src/main/docker/postgres.yml up -d`
 
     2.3. Execute a aplicação através do comando:     
-        `mvn spring-boot:run -Dspring-boot.run.profiles=postgres`
+        `mvn spring-boot:run -Dspring-boot.run.profiles=postgres-local`
 
     2.4. Acesse a aplicação via postman, importe o arquivo de testes e execute alguns comandos.
 
