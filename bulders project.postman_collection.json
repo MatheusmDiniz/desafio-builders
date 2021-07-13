@@ -1,0 +1,168 @@
+{
+	"variables": [],
+	"info": {
+		"name": "bulders project",
+		"_postman_id": "3e6b2ef2-417f-f70e-7770-a3030748755c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Salvar Cliente Completo",
+			"request": {
+				"url": "http://localhost:8080/api/clientes",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Matheus Diniz\",\n\t\"email\": \"matheus@email.com.br\",\n\t\"nascimento\": \"1997-11-06\",\n    \"sexo\": \"MASC\",\n    \"endereco\":{\n    \t\"logradouro\": \"teste lugadouro\",\n    \t\"numeroEndereco\": \"212\",\n    \t\"complemento\": \"complemento endereco\",\n    \t\"bairro\": \"bairo de teste\",\n    \t\"cidade\": \"cidade de teste\",\n    \t\"uf\": \"DF\",\n    \t\"cep\": \"70000000\"},\n    \t\n    \"telefone\":{\n    \t\"ddd\": \"61\",\n    \t\"numeroTelefone\": \"999999999\"}\n    \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Salvar Cliente sem endereço e telefone",
+			"request": {
+				"url": "http://localhost:8080/api/clientes",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Luiz Carlos\",\n\t\"email\": \"luiz@email.com.br\",\n\t\"nascimento\": \"1997-07-12\",\n    \"sexo\": \"MASC\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Client",
+			"request": {
+				"url": "http://localhost:8080/api/clientes/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Matheus Mendes Diniz\",\n\t\"email\": \"matheus@email.com.br\",\n\t\"nascimento\": \"1995-11-06\",\n    \"sexo\": \"MASC\",\n    \"endereco\":{\n    \t\"logradouro\": \"teste lugadouro\",\n    \t\"numeroEndereco\": \"212\",\n    \t\"complemento\": \"complemento endereco\",\n    \t\"bairro\": \"bairo de teste\",\n    \t\"cidade\": \"cidade de teste\",\n    \t\"uf\": \"DF\",\n    \t\"cep\": \"70000000\"},\n    \t\n    \"telefone\":{\n    \t\"ddd\": \"61\",\n    \t\"numeroTelefone\": \"999999999\"}\n    \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todos os Clientes de forma paginada",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/api/clientes/listarClientes?page=0&size=10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"listarClientes"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "size",
+							"value": "10",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar por parametros nome e idade",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/api/clientes?buscar=nome:Matheus Diniz,idade:23",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes"
+					],
+					"query": [
+						{
+							"key": "buscar",
+							"value": "nome:Matheus Diniz,idade:23",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar por paramentros bairro e sexo",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/api/clientes?buscar=endereco.bairro:bairo de teste,sexo:MASC",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes"
+					],
+					"query": [
+						{
+							"key": "buscar",
+							"value": "endereco.bairro:bairo de teste,sexo:MASC",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
