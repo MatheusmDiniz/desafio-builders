@@ -72,7 +72,7 @@ mvn clean package
 2. **Executar usando postgres**
 
     2.1.  Se você já tiver executado alguma vez esses comandos, é acoselhável excluir o container docker para evitar confitos. Execute o comando: 
-                     `docker rm cadastro-postgresql`
+                     `docker rm cliente-postgresql`
     
     2.1. A aplicação depende do banco de dados postgresql, para iniciá-lo execute o comando:
        `docker-compose -f src/main/docker/postgres.yml up -d`
@@ -86,13 +86,25 @@ mvn clean package
        `docker-compose -f src/main/docker/postgres.yml down`
 
 * **Executar via docker-compose:**
-1. Se você já tiver executado alguma vez esses comandos, é acoselhável excluir o container docker para evitar confitos. Execute o comando: `docker rm cadastro-postgresql`
 
-2. Inicie a aplicação via docker-compose:   
-`docker-compose -f docker-compose-local.yml up -d`
+1. **Executar usando H2 Database**
 
-3. Acesse a aplicação via postman, importe o arquivo de testes e execute alguns comandos.
+    1.1. Inicie a aplicação via docker-compose:   
+       `docker-compose -f docker-compose-dbh2.yml up -d`
 
-4. Remova o container docker:
-   `docker-compose -f src/main/docker/postgres.yml down`
+    1.2. Acesse a aplicação via postman, importe o arquivo de testes e execute alguns comandos.
+
+
+2. **Executar usando postgres**
+
+    2.1. Se você já tiver executado alguma vez esses comandos, é acoselhável excluir o container docker para evitar confitos. Execute o comando: 
+        `docker rm cadastro-postgresql`
+
+    2.2. Inicie a aplicação via docker-compose:   
+        `docker-compose -f docker-compose-dbpostgres.yml up -d`
+
+    2.3. Acesse a aplicação via postman, importe o arquivo de testes e execute alguns comandos.
+
+    2.4. Remova o container docker:
+        `docker-compose -f src/main/docker/postgres.yml down`
  
