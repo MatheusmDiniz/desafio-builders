@@ -55,6 +55,10 @@ Para executar a aplicação vá para o diretório raiz do projeto e rode o segui
 ```
 mvn clean install -U
 ```
+Caso ache necessário, exclua a imagem docker criada automaticamente pelo spring-docker-spotify
+```
+docker rmi fexx182/spring-docker-spotify:0.0.1-SNAPSHOT
+```
 
 * **Executar via maven:** 
 
