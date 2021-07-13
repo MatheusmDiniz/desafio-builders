@@ -31,7 +31,7 @@ Desenvolva uma REST API que:
 
 6. Documente sua API e também disponibilize um arquivo Postman para fácil utilização da API.
 - A documentação da API está disponível em `http://localhost:8080/swagger-ui/`
-- O arquivo `Builders.postman_collection.json` que se encontra na raiz do projeto pode ser usado para fazer os testes da API.
+- O arquivo `bulders project.postman_collection.json` que se encontra na raiz do projeto pode ser usado para fazer os testes da API.
 
 ### Testes
 Foram feitos testes em alguns métodos da API apenas para demonstrar como os testes devem ser executados.
