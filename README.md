@@ -91,18 +91,22 @@ docker rmi fexx182/spring-docker-spotify:0.0.1-SNAPSHOT
        `docker-compose -f docker-compose-dbh2.yml up -d`
 
     1.2. Acesse a aplicação via postman, importe o arquivo de testes e execute alguns comandos.
-
-
+    
+    1.3. Remova o container docker: 
+        `docker-compose -f docker-compose-dbh2.yml down`
+        
 2. **Executar usando postgres**
 
-    2.1. Se você já tiver executado alguma vez esses comandos, é acoselhável excluir o container docker para evitar confitos. Execute o comando: 
-        `docker rm cadastro-postgresql`
+    2.1. Se você já tiver executado alguma vez esses comandos, é acoselhável excluir o container docker para evitar confitos. Execute os comandos: 
+        `docker rm cliente-postgresql`
+        `docker rm desafio-builders`
 
     2.2. Inicie a aplicação via docker-compose:   
         `docker-compose -f docker-compose-dbpostgres.yml up -d`
 
     2.3. Acesse a aplicação via postman, importe o arquivo de testes e execute alguns comandos.
 
-    2.4. Remova o container docker:
+    2.4. Remova os containers docker:
         `docker-compose -f src/main/docker/postgres.yml down`
+        `docker-compose -f docker-compose-dbh2.yml down`
  
