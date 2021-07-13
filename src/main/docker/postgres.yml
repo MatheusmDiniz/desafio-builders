@@ -1,0 +1,11 @@
+version: '2'
+services:
+  cliente-postgresql:
+    image: postgres:11.5
+    container_name: cliente-postgresql
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=cadastro
+    ports:
+      - 5432:5432

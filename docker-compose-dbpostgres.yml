@@ -1,0 +1,15 @@
+version: '2'
+services:
+  app:
+    image: matheusdiniz/desafio-builder-docker:2.1
+    container_name: desafio-builders
+    ports:
+      - 8080:8080
+    depends_on:
+      - cliente-postgresql
+    environment:
+      - "SPRING_PROFILES_ACTIVE=postgres"
+  cliente-postgresql:
+    extends:
+      file: src/main/docker/postgres.yml
+      service: cliente-postgresql
