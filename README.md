@@ -1,13 +1,9 @@
-# MVP - Cadastro de clientes
+# Cadastro de clientes
 
 Este projeto define a API para um MVP de cadastro de clientes.
 
 ## O Projeto
 O projeto foi construído usando Java e Spring Boot. Os dados são armazenados no H2 Database do proprio Spring ou Postgresql que é gerenciado via Docker.
-
-As classes de domínio estão organizadas no pacote `com.desafio.builders.domain`. O modelo é bem simples. A classe Cliente é a raiz de agregação, ou seja, é o ponto de entrada para acessar qualquer informação do cliente. Não acessamos os objetos vinculados ao cliente diretamente. O acesso é sempre feito a partir da raiz de agregação.
-
-As classes nesse pacote são anotadas com `@Entity` e algumas outras anotações do Hibernate Validator.
 
 ### A API
 Os endpoints estão definidos no pacote `com.desafio.builders.web.rest`.
@@ -15,7 +11,6 @@ A documentação da API está acessível a partir de:
 http://localhost:8080/swagger-ui/
 
 Os requisitos passados foram:
-
 
 Desenvolva uma REST API que:
 
