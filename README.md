@@ -63,19 +63,25 @@ mvn clean package
 ```
 
 * **Executar via maven:** 
-1. Se você já tiver executado alguma vez esses comandos, é acoselhável excluir o container docker para evitar confitos. Execute o comando:
-   `docker rm cliente-postgresql`
-   
-2. A aplicação depende do banco de dados postgresql, para iniciá-lo execute o comando:
-   `docker-compose -f src/main/docker/postgres.yml up -d`
-   
-3. Execute a aplicação através do comando:     
-`mvn spring-boot:run -Dspring-boot.run.profiles=local`
-   
-4. Acesse a aplicação via postman, importe o arquivo de testes e execute alguns comandos.
 
-5. Remova o container docker:
-   `docker-compose -f src/main/docker/postgres.yml down`
+1. **Executar usando H2 Database**
+    1.1. Execute a aplicação através do comando:     
+            `mvn spring-boot:run`
+        
+2. **Executar usando postgres**
+    2.1.  Se você já tiver executado alguma vez esses comandos, é acoselhável excluir o container docker para evitar confitos. Execute o comando: 
+                     `docker rm cadastro-postgresql`
+    
+    2.1. A aplicação depende do banco de dados postgresql, para iniciá-lo execute o comando:
+       `docker-compose -f src/main/docker/postgres.yml up -d`
+
+    2.3. Execute a aplicação através do comando:     
+        `mvn spring-boot:run -Dspring-boot.run.profiles=postgres`
+
+    2.4. Acesse a aplicação via postman, importe o arquivo de testes e execute alguns comandos.
+
+    2.5. Remova o container docker:
+       `docker-compose -f src/main/docker/postgres.yml down`
 
 * **Executar via docker-compose:**
 1. Se você já tiver executado alguma vez esses comandos, é acoselhável excluir o container docker para evitar confitos. Execute o comando: `docker rm cadastro-postgresql`
