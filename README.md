@@ -108,5 +108,5 @@ docker rmi fexx182/spring-docker-spotify:0.0.1-SNAPSHOT
 
     2.4. Remova os containers docker:
         `docker-compose -f src/main/docker/postgres.yml down`
-        `docker-compose -f docker-compose-dbh2.yml down`
+        `docker-compose -f docker-compose-dbpostgres.yml down`
  
