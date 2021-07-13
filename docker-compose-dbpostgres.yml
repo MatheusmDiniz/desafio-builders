@@ -1,7 +1,7 @@
 version: '2'
 services:
   app:
-    image: matheusdiniz/desafio-builder-docker:v2.3
+    image: matheusdiniz/desafio-builder-docker:v2.4
     container_name: desafio-builders
     ports:
       - 8080:8080
