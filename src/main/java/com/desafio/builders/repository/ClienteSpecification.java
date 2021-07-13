@@ -42,8 +42,9 @@ public class ClienteSpecification implements Specification<Cliente> {
 
         if (criteria.getKey().equalsIgnoreCase("idade")) {
             Integer idade = Integer.valueOf((criteria.getValue()));
-            LocalDate dataNascimento = LocalDate.now().minusYears(idade);
-            return builder.between(root.get("idade"), dataNascimento, LocalDate.now());
+            LocalDate dataInicial = LocalDate.now().minusYears(idade).minusYears(1).plusDays(1);
+            LocalDate dataFinal = LocalDate.now().minusYears(idade);
+            return builder.between(root.get("nascimento"), dataInicial, dataFinal);
         }
 
         if (criteria.getOperation().equals(":")) {

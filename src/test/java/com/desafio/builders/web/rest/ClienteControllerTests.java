@@ -40,12 +40,12 @@ class ClienteControllerTests {
 	private ClienteService clienteService;
 
 	@Test
-	public void contextLoads() {
+	void contextLoads() {
 		assertThat(clienteController).isNotNull();
 	}
 
 	@Test
-	public void inserirCliente() throws Exception {
+	void inserirCliente() throws Exception {
 		Cliente clienteMock = getClienteMock();
 		String clienteJSon = getClienteJSon(clienteMock);
 
@@ -64,7 +64,7 @@ class ClienteControllerTests {
 	}
 
 	@Test
-	public void alterarCliente() throws Exception {
+	void alterarCliente() throws Exception {
 		Cliente clienteMock = getClienteMock();
 		String clienteJSon = getClienteJSon(clienteMock);
 
@@ -82,7 +82,7 @@ class ClienteControllerTests {
 	}
 
 	@Test
-	public void listarClientesPage() throws Exception {
+	void listarClientesPage() throws Exception {
 		Integer pageMock = 0;
 		Integer sizeMock = 10;
 
@@ -98,7 +98,7 @@ class ClienteControllerTests {
 	}
 
 	@Test
-	public void pesquisarPorParametros() throws Exception {
+	void pesquisarPorParametros() throws Exception {
 		String paramsMock = new String("buscar=nome:Annabelle, sexo:FEM, nascimento:1983-01-02, endereco.bairro:Sudoeste");
 
 		when(clienteService.pesquisarPorCriterios(paramsMock)).thenReturn(Arrays.asList(getClienteMock()));

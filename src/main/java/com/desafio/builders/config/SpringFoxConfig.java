@@ -33,7 +33,7 @@ public class SpringFoxConfig {
                 .version("1.0.0")
                 .license("Apache License Version 2.0")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0")
-                        .contact(new Contact("Matheus Mendes Diniz", "https://github.com/llvaleriano/builders", "matheus_mendesdiniz@hotmail.com"))
+                        .contact(new Contact("Matheus Mendes Diniz", "https://github.com/MatheusmDiniz/desafio-builders", "matheus_mendesdiniz@hotmail.com"))
                         .build();
     }
 }

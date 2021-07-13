@@ -14,8 +14,6 @@ import org.springframework.stereotype.Service;
 
 import static org.springframework.data.jpa.domain.Specification.where;
 
-import java.time.LocalDate;
-import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
