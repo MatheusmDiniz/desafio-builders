@@ -51,10 +51,9 @@ O Docker é usado no projeto para instanciar um container do Postgresql.
 Também é usado o Docker-compose para permitir que a aplicação seja disponibilizada através do docker e nesse caso o container de banco dados também é configurado e instanciado através de uma única configuração.
 
 ## Executar a aplicação
-Para executar a aplicação vá para o diretório raiz do projeto e
-* empacote o projeto usando maven
+Para executar a aplicação vá para o diretório raiz do projeto e rode o seguinte comando
 ```
-mvn clean package
+mvn clean install -U
 ```
 
 * **Executar via maven:** 
