@@ -27,7 +27,7 @@ Desenvolva uma REST API que:
 - Foi criada uma especificação (ClienteSpecification) para que fosse possível encadear vários atributos de pesquisa passados para o endpoint via parâmetros queryString. Dessa forma, a camada de serviço pode chamar a camada de repositório passando como parâmetro as especificações recebidas.  
 
 5. É necessário também que cada elemento retornado pela api de clientes informe a idade;
-- Como o modelo é bastante simples, para evitar a criação de objetos desnecessários, a própria entidade está sendo enviada como retorno para o chamador do endpoint. Nesse caso, para retornar a idade do cliente foi implementado um método getIdade() na entidade Cliente.
+- Nesse caso, para retornar a idade do cliente foi implementado um método getIdade() na entidade Cliente.
 
 6. Documente sua API e também disponibilize um arquivo Postman para fácil utilização da API.
 - A documentação da API está disponível em `http://localhost:8080/swagger-ui/`
