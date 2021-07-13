@@ -65,10 +65,12 @@ mvn clean package
 * **Executar via maven:** 
 
 1. **Executar usando H2 Database**
+
     1.1. Execute a aplicação através do comando:     
             `mvn spring-boot:run`
         
 2. **Executar usando postgres**
+
     2.1.  Se você já tiver executado alguma vez esses comandos, é acoselhável excluir o container docker para evitar confitos. Execute o comando: 
                      `docker rm cadastro-postgresql`
     
